@@ -294,6 +294,85 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── Section – Depoimentos ── */}
+      <section className="relative z-10 py-20 md:py-32 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            className="text-2xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            O Que Nossos Usuários Dizem
+          </motion.h2>
+          <motion.p
+            className="text-muted-foreground text-center mb-14 text-sm md:text-base"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.15 }}
+            viewport={{ once: true }}
+          >
+            Resultados reais de pessoas comuns que transformaram suas vidas com o Quantum Pulse AI™
+          </motion.p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Carlos M.",
+                role: "Iniciante em Trading",
+                text: "Em 2 semanas já recuperei meu investimento inicial. O indicador é absurdamente preciso, parece que ele lê o mercado!",
+                profit: "+R$4.200",
+                avatar: "CM",
+              },
+              {
+                name: "Ana Paula S.",
+                role: "Trader há 1 ano",
+                text: "Eu já tinha desistido do mercado financeiro até conhecer o Quantum Pulse. Agora opero todos os dias com confiança e resultados consistentes.",
+                profit: "+R$8.750",
+                avatar: "AP",
+              },
+              {
+                name: "Rafael T.",
+                role: "Engenheiro de Software",
+                text: "Como dev, eu entendo a tecnologia por trás. A IA realmente analisa padrões que nenhum humano conseguiria em tempo real. Impressionante.",
+                profit: "+R$12.300",
+                avatar: "RT",
+              },
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                className="glass rounded-xl p-6 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_hsl(220_100%_60%/0.12)]"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.12, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+              >
+                {/* Stars */}
+                <div className="text-yellow-400 text-sm mb-3">★★★★★</div>
+
+                <p className="text-foreground/90 text-sm leading-relaxed mb-6 flex-1">"{t.text}"</p>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xs font-bold text-primary-foreground">
+                      {t.avatar}
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">{t.role}</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded-md">
+                    {t.profit}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Section 4 – Final CTA ── */}
       <section className="relative z-10 py-20 md:py-32 px-4">
         {/* Glow background */}
