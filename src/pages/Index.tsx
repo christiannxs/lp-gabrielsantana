@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import tradingSetup from "@/assets/trading-setup.jpg";
 
 // ─── Particles Background ───
 const Particles = () => {
@@ -266,6 +267,22 @@ const Index = () => {
             <h2 className="text-xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Resultados Reais com Quantum Pulse AI™
             </h2>
+
+            {/* Proof photo */}
+            <motion.div
+              className="mb-10 rounded-xl overflow-hidden border border-primary/20 shadow-[0_0_40px_hsl(220_100%_60%/0.15)]"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={tradingSetup}
+                alt="Setup de trading com Quantum Pulse AI mostrando resultados em tempo real"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </motion.div>
 
             <CandleChart />
 
