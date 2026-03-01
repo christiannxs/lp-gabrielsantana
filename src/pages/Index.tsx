@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import tradingSetup from "@/assets/trading-setup.jpg";
 
 // ─── Particles Background ───
 const Particles = () => {
