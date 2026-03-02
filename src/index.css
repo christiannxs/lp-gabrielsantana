@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,71 +7,69 @@
 
 @layer base {
   :root {
-    --background: 230 15% 5%;
-    --foreground: 220 20% 95%;
+    --background: 220 50% 4%;
+    --foreground: 180 15% 96%;
 
-    --card: 230 20% 8%;
-    --card-foreground: 220 20% 95%;
+    --card: 220 40% 7%;
+    --card-foreground: 180 15% 96%;
 
-    --popover: 230 20% 8%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 220 40% 7%;
+    --popover-foreground: 180 15% 96%;
 
-    --primary: 220 100% 60%;
-    --primary-foreground: 0 0% 100%;
+    /* Ciano/teal futurista - trading */
+    --primary: 174 80% 45%;
+    --primary-foreground: 220 50% 4%;
 
-    --secondary: 270 100% 65%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 195 90% 50%;
+    --secondary-foreground: 220 50% 4%;
 
-    --muted: 230 15% 15%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 30% 12%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 270 100% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 76% 46%;
+    --accent-foreground: 220 50% 4%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 20% 15%;
-    --input: 230 20% 15%;
-    --ring: 220 100% 60%;
+    --border: 220 25% 14%;
+    --input: 220 25% 14%;
+    --ring: 174 80% 45%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
+    --glow: 174 80% 45%;
+    --glow-strong: 174 100% 55%;
 
-    --neon-blue: 220 100% 60%;
-    --neon-purple: 270 100% 65%;
-    --glow-blue: 0 0 20px hsl(220 100% 60% / 0.6), 0 0 40px hsl(220 100% 60% / 0.3);
-    --glow-purple: 0 0 20px hsl(270 100% 65% / 0.6), 0 0 40px hsl(270 100% 65% / 0.3);
-
-    --sidebar-background: 230 15% 5%;
-    --sidebar-foreground: 220 20% 95%;
-    --sidebar-primary: 220 100% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 100% 65%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 230 20% 15%;
-    --sidebar-ring: 220 100% 60%;
+    --sidebar-background: 220 50% 4%;
+    --sidebar-foreground: 180 15% 96%;
+    --sidebar-primary: 174 80% 45%;
+    --sidebar-primary-foreground: 220 50% 4%;
+    --sidebar-accent: 195 90% 50%;
+    --sidebar-accent-foreground: 220 50% 4%;
+    --sidebar-border: 220 25% 14%;
+    --sidebar-ring: 174 80% 45%;
   }
 
   .dark {
-    --background: 230 15% 5%;
-    --foreground: 220 20% 95%;
-    --card: 230 20% 8%;
-    --card-foreground: 220 20% 95%;
-    --popover: 230 20% 8%;
-    --popover-foreground: 220 20% 95%;
-    --primary: 220 100% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 270 100% 65%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 230 15% 15%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 270 100% 65%;
-    --accent-foreground: 0 0% 100%;
+    --background: 220 50% 4%;
+    --foreground: 180 15% 96%;
+    --card: 220 40% 7%;
+    --card-foreground: 180 15% 96%;
+    --popover: 220 40% 7%;
+    --popover-foreground: 180 15% 96%;
+    --primary: 174 80% 45%;
+    --primary-foreground: 220 50% 4%;
+    --secondary: 195 90% 50%;
+    --secondary-foreground: 220 50% 4%;
+    --muted: 220 30% 12%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 142 76% 46%;
+    --accent-foreground: 220 50% 4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 230 20% 15%;
-    --input: 230 20% 15%;
-    --ring: 220 100% 60%;
+    --border: 220 25% 14%;
+    --input: 220 25% 14%;
+    --ring: 174 80% 45%;
   }
 }
 
@@ -80,67 +79,123 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Glassmorphism */
-.glass {
-  background: hsl(230 20% 10% / 0.4);
-  backdrop-filter: blur(20px);
-  border: 1px solid hsl(220 100% 60% / 0.15);
-}
-
-/* Neon glow button */
-.neon-btn {
-  position: relative;
-  background: linear-gradient(135deg, hsl(220 100% 55%), hsl(270 100% 60%));
-  box-shadow: 0 0 20px hsl(220 100% 60% / 0.5), 0 0 40px hsl(270 100% 65% / 0.3);
-  transition: all 0.3s ease;
-}
-.neon-btn:hover {
-  box-shadow: 0 0 30px hsl(220 100% 60% / 0.8), 0 0 60px hsl(270 100% 65% / 0.5), 0 0 80px hsl(220 100% 60% / 0.3);
-  transform: translateY(-2px);
-}
-
-/* Pulse animation for CTA */
-@keyframes neon-pulse {
-  0%, 100% { box-shadow: 0 0 20px hsl(220 100% 60% / 0.5), 0 0 40px hsl(270 100% 65% / 0.3); }
-  50% { box-shadow: 0 0 30px hsl(220 100% 60% / 0.8), 0 0 60px hsl(270 100% 65% / 0.5), 0 0 90px hsl(220 100% 60% / 0.2); }
-}
-.neon-pulse {
-  animation: neon-pulse 2s ease-in-out infinite;
-}
-
-/* Floating particles */
-@keyframes float-particle {
-  0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
-}
-
-/* Grid lines background */
-.grid-bg {
-  background-image: 
-    linear-gradient(hsl(220 100% 60% / 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(220 100% 60% / 0.03) 1px, transparent 1px);
+/* Grid de fundo futurista */
+.bg-grid-future {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
-/* Scrollbar */
+.bg-grid-fine {
+  background-image:
+    linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glow utilitários */
+.glow-primary {
+  box-shadow: 0 0 20px hsl(var(--glow) / 0.25), 0 0 40px hsl(var(--glow) / 0.1);
+}
+.glow-primary-sm {
+  box-shadow: 0 0 12px hsl(var(--glow) / 0.2);
+}
+.text-glow {
+  text-shadow: 0 0 20px hsl(var(--glow) / 0.5), 0 0 40px hsl(var(--glow) / 0.2);
+}
+
+/* Card / surface com borda luminosa */
+.glass {
+  background: hsl(var(--card) / 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(var(--border));
+}
+.glass-glow {
+  background: hsl(var(--card) / 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  box-shadow: 0 0 30px hsl(var(--primary) / 0.08), inset 0 1px 0 hsl(var(--primary) / 0.1);
+}
+
+/* Painel estilo terminal / trading */
+.trading-panel {
+  box-shadow:
+    0 0 0 1px hsl(var(--border) / 0.6),
+    0 4px 24px hsl(0 0% 0% / 0.4),
+    inset 0 1px 0 hsl(var(--primary) / 0.06);
+}
+
+/* Botão primário futurista */
+.btn-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(174 70% 38%));
+  color: hsl(var(--primary-foreground));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, hsl(174 100% 60% / 0.2), transparent 50%);
+  pointer-events: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px hsl(var(--primary) / 0.45), 0 8px 24px hsl(var(--primary) / 0.25);
+  filter: brightness(1.05);
+}
+
+/* Badge "LIVE" pulsante */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 12px hsl(var(--accent) / 0.5); }
+  50% { opacity: 0.85; box-shadow: 0 0 20px hsl(var(--accent) / 0.7); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Sinal compra/venda na demo do indicador */
+@keyframes signal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-signal-blink {
+  animation: signal-blink 1.2s ease-in-out infinite;
+}
+
+/* Scan line sutil (opcional) */
+.scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, hsl(0 0% 0% / 0.02) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Scrollbar futurista */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(230 15% 5%);
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(220 100% 60% / 0.3);
+  background: hsl(var(--primary) / 0.4);
   border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
 }
