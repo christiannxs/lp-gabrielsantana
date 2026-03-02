@@ -93,9 +93,17 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 text-center text-muted-foreground text-sm border-t border-border/80">
+      <footer className="py-8 text-center text-muted-foreground text-sm border-t border-border/80 space-y-3">
         <p className="font-mono text-xs tracking-wider">
           © 2026 Pulse A.I. Todos os direitos reservados.
+        </p>
+        <p className="mx-auto max-w-4xl text-[10px] leading-snug text-muted-foreground/70">
+          Este site não é afiliado ao Facebook ou a qualquer entidade do Meta Ads. Depois que você sair do Facebook, a
+          responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar
+          todas as provas do produto e usamos resultados reais. Nenhuma informação nessa página ou no grupo deve ser
+          interpretado como ganhos garantidos, todos os feedbacks e depoimentos são reais de membros do grupo, mas não
+          podem garantir resultados semelhantes ou iguais, o resultado final depende do esforço, dedicação e empenho
+          individuais.
         </p>
       </footer>
     </div>
