@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const TypingText = ({ text }: { text: string }) => {
@@ -81,15 +82,18 @@ const Index = () => {
             <span className="text-destructive font-medium">PUT</span> em segundos, com paridade, horário e % de assertividade.
           </motion.p>
 
-          <motion.a
-            href="#hero"
-            className="relative btn-primary font-semibold text-base px-8 py-3.5 rounded-lg inline-block glow-primary-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 3, duration: 0.4 }}
           >
-            Quero começar grátis agora
-          </motion.a>
+            <Link
+              to="/pulseai"
+              className="relative btn-primary font-semibold text-base px-8 py-3.5 rounded-lg inline-block glow-primary-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              Quero começar grátis agora
+            </Link>
+          </motion.div>
         </div>
       </section>
 
