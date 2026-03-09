@@ -185,52 +185,6 @@
   pointer-events: none;
 }
 
-/* PulseAI / Indicador – blink compra (accent) e venda (destructive) */
-.pulseai-blink-buy {
-  animation: pulseai-blink 1s infinite;
-  color: hsl(var(--accent));
-}
-.pulseai-blink-sell {
-  animation: pulseai-blink 1s infinite;
-  color: hsl(var(--destructive));
-}
-@keyframes pulseai-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-.pulseai-logo-shine::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, hsl(var(--primary) / 0.2), transparent);
-  animation: pulseai-shine 3s infinite;
-  pointer-events: none;
-}
-@keyframes pulseai-shine {
-  0% { transform: rotate(0deg) translate(-50%, -50%); }
-  100% { transform: rotate(360deg) translate(-50%, -50%); }
-}
-.pulseai-robot-eye-pulse {
-  animation: pulseai-eye-pulse 2s infinite;
-}
-.pulseai-robot-eye-pulse-fast {
-  animation: pulseai-eye-blink 1s infinite;
-}
-.pulseai-robot-eye-slow {
-  animation: pulseai-eye-blink 3s infinite;
-}
-@keyframes pulseai-eye-pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.5); }
-}
-@keyframes pulseai-eye-blink {
-  0%, 100% { border-color: hsl(var(--primary)); }
-  50% { border-color: hsl(var(--border)); }
-}
-
 /* Scrollbar futurista */
 ::-webkit-scrollbar {
   width: 6px;

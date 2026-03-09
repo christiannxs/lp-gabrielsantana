@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const TypingText = ({ text }: { text: string }) => {
@@ -87,12 +86,17 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 3, duration: 0.4 }}
           >
-            <Link
-              to="/pulseai"
+            <a
+              href={
+                import.meta.env.VITE_INDICATOR_URL ||
+                "https://t.me/GabriellTraderbot?start=69aa4065d01f9936e8017b1d"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative btn-primary font-semibold text-base px-8 py-3.5 rounded-lg inline-block glow-primary-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Quero começar grátis agora
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
