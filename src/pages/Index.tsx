@@ -87,7 +87,7 @@ const Index = () => {
             transition={{ delay: 3, duration: 0.4 }}
           >
             <a
-              href="https://t.me/GabriellTraderbot?start=69aa4065d01f9936e8017b1d"
+              href="https://t.me/+tk5VyUcBe99kZTIx"
               target="_blank"
               rel="noopener noreferrer"
               className="relative btn-primary font-semibold text-base px-8 py-3.5 rounded-lg inline-block glow-primary-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
